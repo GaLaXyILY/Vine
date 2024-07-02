@@ -63,4 +63,6 @@ jobs:
           secret_v2: ${{ secrets.API_KEY }}
           tag: ${{ env.tag }}
           project_id: ${{ env.project_id }}
-        run: sh scripts/upstream.sh
+        run: | 
+          chmod +x ./gradlew 
+          sh scripts/upstream.sh
