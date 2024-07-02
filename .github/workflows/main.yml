@@ -32,8 +32,8 @@ jobs:
         run: gradle applyPatches
       - name: CreateJar
         run: gradle createMojmapBundlerJar createMojmapPaperclipJar
-    #  - name: SetENV
-      #  run: sh scripts/SetENV.sh
+      - name: SetENV
+        run: sh scripts/SetENV.sh
       - name: Upload Artifact
         uses: "actions/upload-artifact@v4"
         with:
